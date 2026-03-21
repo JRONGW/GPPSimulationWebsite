@@ -28,13 +28,15 @@ body {
 
 .title-line {
   display: flex;
-  justify-content: space-between;
   align-items: baseline;
   font-weight: 600;
   font-size: 20px;
   letter-spacing: -0.02em;
   line-height: 1;
-  white-space: nowrap;
+  white-space: normal;   /* allow wrapping */
+  flex-wrap: wrap;       /* allow flex items to go to next line */
+  justify-content: center; /* optional: center it nicely */
+  gap: 0.2em;
   width: 100%;
   background: linear-gradient(
     90deg,
