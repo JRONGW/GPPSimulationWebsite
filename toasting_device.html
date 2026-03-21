@@ -107,7 +107,7 @@ function fitTitles() {
     const el = document.getElementById(id);
     if (!el) return;
     const available = el.parentElement.clientWidth;
-    let lo = 8, hi = 150, mid;
+    let lo = 8, hi = 120, mid;
     while (hi - lo > 0.5) {
       mid = (lo + hi) / 2;
       el.style.fontSize = mid + 'px';
