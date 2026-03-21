@@ -15,17 +15,11 @@ body {
 
 .wrap {
   background: #82e2e2;
-  padding: 1.4rem 1rem 1.8rem;
+  padding: 2.5rem 2.5rem 3rem;
   min-height: 100vh;
 }
 
 /* ── Title ── */
-.title {
-  overflow: hidden;
-  padding: 0 0 1.2rem;
-  font-weight: 600;
-  font-size: 20px;
-}
 .main-title {
   overflow: hidden;
   padding: 0 0 1.2rem;
