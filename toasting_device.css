@@ -20,6 +20,12 @@ body {
 }
 
 /* ── Title ── */
+.title {
+  overflow: hidden;
+  padding: 0 0 1.2rem;
+  font-weight: 600;
+  font-size: 20px;
+}
 .main-title {
   overflow: hidden;
   padding: 0 0 1.2rem;
