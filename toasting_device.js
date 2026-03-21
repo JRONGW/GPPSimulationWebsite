@@ -1,5 +1,48 @@
 const cups = [false, false, false];
 
+function fitTitleLine(lineId, minSize = 24, maxSize = 220) {
+  const line = document.getElementById(lineId);
+  if (!line) return;
+
+  const words = Array.from(line.querySelectorAll('span'));
+  if (!words.length) return;
+
+  const available = line.clientWidth;
+
+  let lo = minSize;
+  let hi = maxSize;
+
+  while (hi - lo > 0.5) {
+    const mid = (lo + hi) / 2;
+    line.style.fontSize = mid + 'px';
+
+    const wordsWidth = words.reduce((sum, word) => {
+      return sum + word.getBoundingClientRect().width;
+    }, 0);
+
+    if (wordsWidth <= available) {
+      lo = mid;
+    } else {
+      hi = mid;
+    }
+  }
+
+  line.style.fontSize = lo + 'px';
+}
+
+
+
+window.addEventListener('load', () => {
+  fitTitles();
+  render();
+});
+
+window.addEventListener('resize', fitTitles);
+
+if (document.fonts && document.fonts.ready) {
+  document.fonts.ready.then(fitTitles);
+}
+
 function toggleCup(i) {
   cups[i] = !cups[i];
   render();
