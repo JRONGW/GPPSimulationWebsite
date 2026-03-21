@@ -23,14 +23,14 @@ body {
 .main-title {
   padding: 0 0 1.2rem;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 12px;
 }
 
 .title-line {
   display: flex;
   align-items: baseline;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 12px;
   letter-spacing: -0.02em;
   line-height: 1;
   white-space: normal;   /* allow wrapping */
