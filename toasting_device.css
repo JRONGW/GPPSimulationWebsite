@@ -33,9 +33,9 @@ body {
   font-size: 12px;
   letter-spacing: -0.02em;
   line-height: 1;
-  white-space: normal;   /* allow wrapping */
+  white-space: nowrap;   /* allow wrapping */
   flex-wrap: wrap;       /* allow flex items to go to next line */
-  justify-content: center; /* optional: center it nicely */
+  justify-content: space-between; /* optional: center it nicely */
   gap: 0.2em;
   width: 100%;
   background: linear-gradient(
