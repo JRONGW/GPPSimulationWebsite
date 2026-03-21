@@ -31,8 +31,8 @@ function fitTitleLine(lineId, minSize = 60, maxSize = 220) {
 }
 
 function fitTitles() {
-  fitTitleLine('title-1', 112, 160);
-  fitTitleLine('title-2', 176, 240);
+  fitTitleLine('title-1', 56, 160);
+  fitTitleLine('title-2', 88, 240);
 }
 
 window.addEventListener('load', () => {
