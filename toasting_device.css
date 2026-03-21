@@ -199,8 +199,8 @@ body {
 
 /* ── Cup SVG ── */
 .cup {
-  width: 102px;
-  height: 90px;
+  width: 122px;
+  height: 108px;
   opacity: 0;
   transition: opacity 0.25s, transform 0.25s;
   transform: scale(0.8);
