@@ -22,22 +22,20 @@ body {
 /* ── Title ── */
 .main-title {
   padding: 0 0 2rem;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 0.35rem;
+  gap: 0.2rem;
 }
 
 .title-line {
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
   align-items: baseline;
-  gap: 0.35em;
-  width: auto;
-  line-height: 0.95;
-  letter-spacing: -0.02em;
-  white-space: normal;
+  flex-wrap: nowrap;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
 
   background: linear-gradient(
     90deg,
@@ -59,27 +57,33 @@ body {
   display: inline-block;
 }
 
+/* first line: left aligned */
 #title-1 {
-  font-size: clamp(53px, 4vw, 82px);
-  font-weight: 600;
+  justify-content: flex-start;
+  gap: 0.22em;
+  font-size: clamp(44px, 5.2vw, 84px);
+  font-weight: 700;
   opacity: 0.92;
 }
 
+/* second line: right aligned and larger */
 #title-2 {
-  font-size: clamp(63px, 7vw, 96px);
+  justify-content: flex-end;
+  gap: 0.18em;
+  font-size: clamp(68px, 8.6vw, 150px);
   font-weight: 700;
-  line-height: 0.88;
-  margin-left: 0.6rem;
+  line-height: 0.86;
+  text-align: right;
 }
 
 .title-line.sub {
   background: linear-gradient(
     90deg,
-    rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.7) 30%,
+    rgba(255,255,255,0.72) 0%, rgba(255,255,255,0.72) 30%,
     #fff 48%,
     #ccffff 50%,
     #fff 52%,
-    rgba(255,255,255,0.7) 70%, rgba(255,255,255,0.7) 100%
+    rgba(255,255,255,0.72) 70%, rgba(255,255,255,0.72) 100%
   );
   background-size: 220% 100%;
   background-clip: text;
