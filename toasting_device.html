@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remote Toasting Device</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="toasting_device.css">
+</head>
+<body>
+<div class="wrap">
+
+  <div class="main-title">
+    <div class="title-line" id="title-1">
+      <span>Remote</span><span>Toasting</span><span>Device</span>
+    </div>
+    <div class="title-line sub" id="title-2">
+      <span>The</span><span>Scattered</span><span>Trio</span>
+    </div>
+  </div>
+
+  <p class="label-top">Tap a device to place or remove a cup — lights on the other two respond</p>
+
+  <div class="devices-row">
+
+    <!-- Device A -->
+    <div class="device-card" onclick="toggleCup(0)">
+      <span class="device-name">Device A</span>
+      <div class="lights-row">
+        <div class="light" id="light-0-0"></div>
+        <div class="light" id="light-0-1"></div>
+      </div>
+      <div class="pad-area" id="pad-0">
+        <svg class="cup" id="cup-0" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg">
+          <path d="m560.95 228.56c-189.52 0-343.13 46.969-343.13 104.91-19.969 270.32 123.1 485.53 343.13 495.19 123.74-5.4375 223.18-75.844 282.89-184.55-3.2812 5.9531-6.6094 11.672-9.9844 17.156l12.422-0.79688c78.891-5.2031 163.69-9.3281 210.61-83.766 26.062-41.297 36.469-94.453 7.7344-137.34-15.75-23.484-40.078-38.344-67.359-44.578-30.281-6.9375-62.203-3.1875-91.594 6.1875-0.14062 5.6719-0.375 11.906-0.79688 18.609 1.5938-27.891 1.3594-56.672-0.84375-86.062v-0.046876c0.09375-57.938-153.56-104.91-343.08-104.91zm343.92 192.1c-0.14062 2.7188-0.32812 5.5312-0.5625 8.3906 0.1875-2.8125 0.42188-5.5781 0.5625-8.3906zm-0.98438 14.109-0.51562 6.375 7.7344-2.7188c39.422-13.922 96.094-18 122.63 21.609 20.109 30.047 9.5625 68.391-8.2969 96.703-36.281 57.516-108.47 61.922-170.48 65.766l-1.3125 2.6719c27.188-55.594 44.531-120.14 50.25-190.4zm-50.625 191.26c-1.3594 2.7188-2.7188 5.4375-4.125 8.1094 1.4062-2.6719 2.7656-5.3438 4.125-8.1094zm-4.6875 9.2812c-1.5 2.9062-3.0469 5.7656-4.5938 8.625 1.5469-2.8125 3.0938-5.7188 4.5938-8.625zm-22.312 79.031c107.81 26.016 177.61 67.547 177.61 114.33 0 78.844-198.28 142.78-442.87 142.78-244.6 0-442.87-63.938-442.87-142.78 0-46.781 69.797-88.312 177.61-114.33 28.406 36.234 62.812 67.5 103.27 91.219 49.266 28.969 103.92 44.578 160.97 47.062l1.0312 0.046875 1.0312-0.046875c108.89-4.7812 200.02-56.531 264.24-138.28zm-265.31-299.95c-176.26 0-319.13-36.234-319.13-80.906s142.87-80.906 319.13-80.906c176.26 0 319.13 36.234 319.13 80.906 0.046874 44.672-142.82 80.906-319.13 80.906z" fill-rule="evenodd"/>
+        </svg>
+        <span class="tap-btn" id="pad-hint-0">tap to place</span>
+      </div>
+      <span class="pad-label">pressure pad</span>
+    </div>
+
+    <!-- Device B -->
+    <div class="device-card" onclick="toggleCup(1)">
+      <span class="device-name">Device B</span>
+      <div class="lights-row">
+        <div class="light" id="light-1-0"></div>
+        <div class="light" id="light-1-1"></div>
+      </div>
+      <div class="pad-area" id="pad-1">
+        <svg class="cup" id="cup-1" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg">
+          <path d="m560.95 228.56c-189.52 0-343.13 46.969-343.13 104.91-19.969 270.32 123.1 485.53 343.13 495.19 123.74-5.4375 223.18-75.844 282.89-184.55-3.2812 5.9531-6.6094 11.672-9.9844 17.156l12.422-0.79688c78.891-5.2031 163.69-9.3281 210.61-83.766 26.062-41.297 36.469-94.453 7.7344-137.34-15.75-23.484-40.078-38.344-67.359-44.578-30.281-6.9375-62.203-3.1875-91.594 6.1875-0.14062 5.6719-0.375 11.906-0.79688 18.609 1.5938-27.891 1.3594-56.672-0.84375-86.062v-0.046876c0.09375-57.938-153.56-104.91-343.08-104.91zm343.92 192.1c-0.14062 2.7188-0.32812 5.5312-0.5625 8.3906 0.1875-2.8125 0.42188-5.5781 0.5625-8.3906zm-0.98438 14.109-0.51562 6.375 7.7344-2.7188c39.422-13.922 96.094-18 122.63 21.609 20.109 30.047 9.5625 68.391-8.2969 96.703-36.281 57.516-108.47 61.922-170.48 65.766l-1.3125 2.6719c27.188-55.594 44.531-120.14 50.25-190.4zm-50.625 191.26c-1.3594 2.7188-2.7188 5.4375-4.125 8.1094 1.4062-2.6719 2.7656-5.3438 4.125-8.1094zm-4.6875 9.2812c-1.5 2.9062-3.0469 5.7656-4.5938 8.625 1.5469-2.8125 3.0938-5.7188 4.5938-8.625zm-22.312 79.031c107.81 26.016 177.61 67.547 177.61 114.33 0 78.844-198.28 142.78-442.87 142.78-244.6 0-442.87-63.938-442.87-142.78 0-46.781 69.797-88.312 177.61-114.33 28.406 36.234 62.812 67.5 103.27 91.219 49.266 28.969 103.92 44.578 160.97 47.062l1.0312 0.046875 1.0312-0.046875c108.89-4.7812 200.02-56.531 264.24-138.28zm-265.31-299.95c-176.26 0-319.13-36.234-319.13-80.906s142.87-80.906 319.13-80.906c176.26 0 319.13 36.234 319.13 80.906 0.046874 44.672-142.82 80.906-319.13 80.906z" fill-rule="evenodd"/>
+        </svg>
+        <span class="tap-btn" id="pad-hint-1">tap to place</span>
+      </div>
+      <span class="pad-label">pressure pad</span>
+    </div>
+
+    <!-- Device C -->
+    <div class="device-card" onclick="toggleCup(2)">
+      <span class="device-name">Device C</span>
+      <div class="lights-row">
+        <div class="light" id="light-2-0"></div>
+        <div class="light" id="light-2-1"></div>
+      </div>
+      <div class="pad-area" id="pad-2">
+        <svg class="cup" id="cup-2" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg">
+          <path d="m560.95 228.56c-189.52 0-343.13 46.969-343.13 104.91-19.969 270.32 123.1 485.53 343.13 495.19 123.74-5.4375 223.18-75.844 282.89-184.55-3.2812 5.9531-6.6094 11.672-9.9844 17.156l12.422-0.79688c78.891-5.2031 163.69-9.3281 210.61-83.766 26.062-41.297 36.469-94.453 7.7344-137.34-15.75-23.484-40.078-38.344-67.359-44.578-30.281-6.9375-62.203-3.1875-91.594 6.1875-0.14062 5.6719-0.375 11.906-0.79688 18.609 1.5938-27.891 1.3594-56.672-0.84375-86.062v-0.046876c0.09375-57.938-153.56-104.91-343.08-104.91zm343.92 192.1c-0.14062 2.7188-0.32812 5.5312-0.5625 8.3906 0.1875-2.8125 0.42188-5.5781 0.5625-8.3906zm-0.98438 14.109-0.51562 6.375 7.7344-2.7188c39.422-13.922 96.094-18 122.63 21.609 20.109 30.047 9.5625 68.391-8.2969 96.703-36.281 57.516-108.47 61.922-170.48 65.766l-1.3125 2.6719c27.188-55.594 44.531-120.14 50.25-190.4zm-50.625 191.26c-1.3594 2.7188-2.7188 5.4375-4.125 8.1094 1.4062-2.6719 2.7656-5.3438 4.125-8.1094zm-4.6875 9.2812c-1.5 2.9062-3.0469 5.7656-4.5938 8.625 1.5469-2.8125 3.0938-5.7188 4.5938-8.625zm-22.312 79.031c107.81 26.016 177.61 67.547 177.61 114.33 0 78.844-198.28 142.78-442.87 142.78-244.6 0-442.87-63.938-442.87-142.78 0-46.781 69.797-88.312 177.61-114.33 28.406 36.234 62.812 67.5 103.27 91.219 49.266 28.969 103.92 44.578 160.97 47.062l1.0312 0.046875 1.0312-0.046875c108.89-4.7812 200.02-56.531 264.24-138.28zm-265.31-299.95c-176.26 0-319.13-36.234-319.13-80.906s142.87-80.906 319.13-80.906c176.26 0 319.13 36.234 319.13 80.906 0.046874 44.672-142.82 80.906-319.13 80.906z" fill-rule="evenodd"/>
+        </svg>
+        <span class="tap-btn" id="pad-hint-2">tap to place</span>
+      </div>
+      <span class="pad-label">pressure pad</span>
+    </div>
+
+    <!-- Kettle -->
+    <div class="device-card kettle-card">
+      <span class="device-name">Kettle</span>
+      <div class="lights-row" style="visibility:hidden">
+        <div class="light"></div>
+        <div class="light"></div>
+      </div>
+      <div class="kettle-area">
+        <svg viewBox="0 0 1200 1300" xmlns="http://www.w3.org/2000/svg">
+          <ellipse class="glow-ring" id="glow-ring" cx="620" cy="1220" rx="380" ry="60" fill="rgba(255,255,255,0.4)" opacity="0"/>
+          <path id="kp-body"   class="kettle-part" d="m420 433.2h392.4s278.4 222-37.199 438h-321.6c0.003906 0-315.6-195.6-33.598-438z"/>
+          <path id="kp-handle" class="kettle-part" d="m314.4 705.6s-105.6-2.3984-136.8-150c-31.199-147.6-24-145.2-72-172.8-27.602-28.801 45.602-40.801 45.602-40.801s32.398 1.1992 56.398 54 31.199 86.398 64.801 105.6c33.602 19.199 67.199 22.801 67.199 22.801"/>
+          <path id="kp-rim"    class="kettle-part" d="m420 433.2s178.8-156 392.4 0h-392.4zm392.4 8.4023c-213.6-156-392.4 0-392.4 0h392.4z"/>
+          <path id="kp-lid"    class="kettle-part" d="m669.6 334.8c0 18.555-23.105 33.598-51.602 33.598s-51.602-15.043-51.602-33.598c0-18.559 23.105-33.602 51.602-33.602s51.602 15.043 51.602 33.602z"/>
+          <path id="kp-spout"  class="kettle-part" d="m1106.4 622.8c0 82.801-79.199 151.2-177.6 151.2-18 0-36-2.3984-52.801-7.1992 20.398-39.602 69.602-134.4-28.801-278.4 24-10.801 52.801-16.801 81.602-16.801 98.402 1.1992 177.6 68.398 177.6 151.2zm-176.4-108c-20.398 0-38.398 3.6016-56.398 10.801 48 132 33.602 127.2 24 201.6 10.801 2.3984 21.602 3.6016 32.398 3.6016 69.602 0 127.2-48 127.2-108 0-60.004-57.598-108-127.2-108z"/>
+          <rect id="kettle-band" class="kettle-band" x="380" y="830" width="460" height="50" rx="25" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.5)" stroke-width="12"/>
+          <path class="steam-path" id="steam-a" d="M530 290 Q510 230 540 170 Q570 110 550 50" fill="none" stroke-width="18" stroke-linecap="round" style="animation-delay:0s;transform-origin:530px 170px"/>
+          <path class="steam-path" id="steam-b" d="M620 270 Q600 210 630 150 Q660 90 640 30"  fill="none" stroke-width="18" stroke-linecap="round" style="animation-delay:.5s;transform-origin:620px 150px"/>
+          <path class="steam-path" id="steam-c" d="M710 290 Q690 230 720 170 Q750 110 730 50" fill="none" stroke-width="18" stroke-linecap="round" style="animation-delay:1s;transform-origin:710px 170px"/>
+        </svg>
+        <div class="effect-text" id="toast-text">Cheers!</div>
+      </div>
+      <span class="pad-label">toasting kettle</span>
+    </div>
+
+  </div>
+
+  <p class="hint">Lights on each device show how many others have placed their cups</p>
+</div>
+
+<script>
+function fitTitles() {
+  ['title-1', 'title-2'].forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const available = el.parentElement.clientWidth;
+    let lo = 8, hi = 150, mid;
+    while (hi - lo > 0.5) {
+      mid = (lo + hi) / 2;
+      el.style.fontSize = mid + 'px';
+      el.scrollWidth > available ? (hi = mid) : (lo = mid);
+    }
+    el.style.fontSize = lo + 'px';
+  });
+}
+document.fonts.ready.then(fitTitles);
+window.addEventListener('resize', fitTitles);
+
+const cups = [false, false, false];
+
+function toggleCup(i) {
+  cups[i] = !cups[i];
+  render();
+}
+
+function render() {
+  const count = cups.filter(Boolean).length;
+  for (let i = 0; i < 3; i++) {
+    document.getElementById('cup-' + i).classList.toggle('visible', cups[i]);
+    document.getElementById('pad-hint-' + i).style.opacity = cups[i] ? '0' : '1';
+    document.getElementById('pad-' + i).classList.toggle('pressed', cups[i]);
+    const others = [0, 1, 2].filter(j => j !== i);
+    for (let k = 0; k < 2; k++) {
+      document.getElementById('light-' + i + '-' + k).classList.toggle('on', cups[others[k]]);
+    }
+  }
+  const allOn = count === 3;
+  document.getElementById('kettle-band').style.fill = allOn ? 'rgba(255,255,255,0.55)' : 'rgba(255,255,255,0.15)';
+  ['kp-body', 'kp-handle', 'kp-rim', 'kp-spout'].forEach(id => {
+    document.getElementById(id).style.stroke = allOn ? '#fff' : 'rgba(255,255,255,0.88)';
+  });
+  document.getElementById('kp-lid').style.fill = allOn ? '#fff' : 'rgba(255,255,255,0.88)';
+  ['steam-a', 'steam-b', 'steam-c'].forEach(id => document.getElementById(id).classList.toggle('on', allOn));
+  document.getElementById('glow-ring').classList.toggle('on', allOn);
+  document.getElementById('toast-text').classList.toggle('visible', allOn);
+}
+
+render();
+</script>
+</body>
+</html>
