@@ -1,6 +1,6 @@
 const cups = [false, false, false];
 
-function fitTitleLine(lineId, minSize = 24, maxSize = 220) {
+function fitTitleLine(lineId, minSize = 60, maxSize = 220) {
   const line = document.getElementById(lineId);
   if (!line) return;
 
@@ -30,7 +30,10 @@ function fitTitleLine(lineId, minSize = 24, maxSize = 220) {
   line.style.fontSize = lo + 'px';
 }
 
-
+function fitTitles() {
+  fitTitleLine('title-1', 56, 160);
+  fitTitleLine('title-2', 88, 240);
+}
 
 window.addEventListener('load', () => {
   fitTitles();
