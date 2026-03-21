@@ -53,6 +53,11 @@ body {
   -webkit-text-fill-color: transparent;
   animation: sweep 3s linear infinite;
 }
+.title-line > span:nth-child(1), /* first word */
+.title-line > span:nth-child(2) { /* second word */
+  font-size: 36px; /* smaller size for the first line */
+}
+
 
 .title-line.sub {
   font-size: 0.62em;
