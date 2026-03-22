@@ -1,9 +1,6 @@
 :root {
-  --turq: #b8f5f0;
-  --turq-d: #8ee1db;
-  --soft-red: #f3d8dc;
-  --soft-red-2: #edd0d6;
-  --lavender: #d9c2f3;
+  --turq: #ddbcbc;
+  --turq-d: #eab6b6;
 }
 
 * {
@@ -13,18 +10,15 @@
 
 body {
   margin: 0;
-  background:
-    radial-gradient(circle at 18% 88%, rgba(217,194,243,0.9) 0%, rgba(217,194,243,0.55) 18%, rgba(217,194,243,0) 38%),
-    linear-gradient(90deg, #f2d7db 0%, #e9d9dc 34%, #d9f3f1 68%, #d4f0ef 100%);
+  background: var(--turq);
 }
 
 .wrap {
-  background:
-    radial-gradient(circle at 18% 88%, rgba(217,194,243,0.9) 0%, rgba(217,194,243,0.55) 18%, rgba(217,194,243,0) 38%),
-    linear-gradient(90deg, #f2d7db 0%, #e9d9dc 34%, #d9f3f1 68%, #d4f0ef 100%);
+  background: var(--turq);
   padding: 2.5rem 2.5rem 3rem;
   min-height: 160vh;
 }
+
 /* ── Title ── */
 .main-title {
   width: 100%;
@@ -37,7 +31,7 @@ body {
 .title-line {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between;   /* fill to both edges */
   align-items: baseline;
   flex-wrap: nowrap;
   white-space: nowrap;
@@ -46,13 +40,11 @@ body {
 
   background: linear-gradient(
     90deg,
-    #fff7f8 0%,
-    #ffffff 24%,
-    rgba(255,255,255,0) 44%,
-    #d6f5f2 50%,
-    rgba(255,255,255,0) 56%,
-    #ffeef1 76%,
-    #ffffff 100%
+    #fff 0%, #fff 30%,
+    rgba(255,255,255,0) 48%,
+    #aaf6f6 50%,
+    rgba(255,255,255,0) 52%,
+    #fff 70%, #fff 100%
   );
   background-size: 220% 100%;
   background-clip: text;
